@@ -10,10 +10,10 @@ import {
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { ApiKeyGuard } from '../auth/api-key.guard';
 
 @Controller('tasks')
-@UseGuards(JwtAuthGuard)
+@UseGuards(ApiKeyGuard)
 export class TasksController {
   constructor(private tasksService: TasksService) {}
 

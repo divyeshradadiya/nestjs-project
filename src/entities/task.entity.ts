@@ -17,7 +17,8 @@ export class Task {
   assignee: User;
 
   @Column({
-    type: 'text',
+    type: 'enum',
+    enum: TaskStatus,
     default: TaskStatus.PENDING,
   })
   status: TaskStatus;

@@ -5,27 +5,6 @@
   },
   "item": [
     {
-      "name": "Login",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\"username\": \"admin\", \"password\": \"admin123\"}"
-        },
-        "url": {
-          "raw": "{{base_url}}/auth/login",
-          "host": ["{{base_url}}"],
-          "path": ["auth", "login"]
-        }
-      }
-    },
-    {
       "name": "Create Team",
       "request": {
         "method": "POST",
@@ -35,8 +14,8 @@
             "value": "application/json"
           },
           {
-            "key": "Authorization",
-            "value": "Bearer {{token}}"
+            "key": "x-api-key",
+            "value": "{{api_key}}"
           }
         ],
         "body": {
@@ -56,8 +35,8 @@
         "method": "GET",
         "header": [
           {
-            "key": "Authorization",
-            "value": "Bearer {{token}}"
+            "key": "x-api-key",
+            "value": "{{api_key}}"
           }
         ],
         "url": {
@@ -77,8 +56,8 @@
             "value": "application/json"
           },
           {
-            "key": "Authorization",
-            "value": "Bearer {{token}}"
+            "key": "x-api-key",
+            "value": "{{api_key}}"
           }
         ],
         "body": {
@@ -98,8 +77,8 @@
         "method": "GET",
         "header": [
           {
-            "key": "Authorization",
-            "value": "Bearer {{token}}"
+            "key": "x-api-key",
+            "value": "{{api_key}}"
           }
         ],
         "url": {
@@ -119,8 +98,8 @@
             "value": "application/json"
           },
           {
-            "key": "Authorization",
-            "value": "Bearer {{token}}"
+            "key": "x-api-key",
+            "value": "{{api_key}}"
           }
         ],
         "body": {
@@ -141,8 +120,8 @@
       "value": "http://localhost:3000"
     },
     {
-      "key": "token",
-      "value": ""
+      "key": "api_key",
+      "value": "your-secret-api-key-12345"
     }
   ]
 }
