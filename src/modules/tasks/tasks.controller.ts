@@ -10,10 +10,10 @@ import {
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
-import { ApiKeyGuard } from '../auth/api-key.guard';
+import { BearerAuthGuard } from '../auth/bearer-auth.guard';
 
 @Controller('tasks')
-@UseGuards(ApiKeyGuard)
+@UseGuards(BearerAuthGuard)
 export class TasksController {
   constructor(private tasksService: TasksService) {}
 

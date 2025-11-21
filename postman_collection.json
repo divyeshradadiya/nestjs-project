@@ -14,8 +14,8 @@
             "value": "application/json"
           },
           {
-            "key": "x-api-key",
-            "value": "{{api_key}}"
+            "key": "Authorization",
+            "value": "Bearer {{bearer_token}}"
           }
         ],
         "body": {
@@ -35,8 +35,8 @@
         "method": "GET",
         "header": [
           {
-            "key": "x-api-key",
-            "value": "{{api_key}}"
+            "key": "Authorization",
+            "value": "Bearer {{bearer_token}}"
           }
         ],
         "url": {
@@ -56,8 +56,8 @@
             "value": "application/json"
           },
           {
-            "key": "x-api-key",
-            "value": "{{api_key}}"
+            "key": "Authorization",
+            "value": "Bearer {{bearer_token}}"
           }
         ],
         "body": {
@@ -77,8 +77,8 @@
         "method": "GET",
         "header": [
           {
-            "key": "x-api-key",
-            "value": "{{api_key}}"
+            "key": "Authorization",
+            "value": "Bearer {{bearer_token}}"
           }
         ],
         "url": {
@@ -98,8 +98,8 @@
             "value": "application/json"
           },
           {
-            "key": "x-api-key",
-            "value": "{{api_key}}"
+            "key": "Authorization",
+            "value": "Bearer {{bearer_token}}"
           }
         ],
         "body": {
@@ -120,8 +120,8 @@
       "value": "http://localhost:3000"
     },
     {
-      "key": "api_key",
-      "value": "your-secret-api-key-12345"
+      "key": "bearer_token",
+      "value": "your-secret-bearer-token-12345"
     }
   ]
 }

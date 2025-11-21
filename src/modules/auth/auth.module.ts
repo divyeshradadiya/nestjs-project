@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { ApiKeyGuard } from './api-key.guard';
+import { BearerAuthGuard } from './bearer-auth.guard';
 
 @Module({
   imports: [ConfigModule],
-  providers: [ApiKeyGuard],
-  exports: [ApiKeyGuard],
+  providers: [BearerAuthGuard],
+  exports: [BearerAuthGuard],
 })
 export class AuthModule {}

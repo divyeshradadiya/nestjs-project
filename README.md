@@ -1,10 +1,10 @@
 # Task Management API
 
-A NestJS application for managing tasks and teams with API key authentication.
+A NestJS application for managing tasks and teams with Bearer token authentication.
 
 ## Features
 
-- API key authentication for secure access
+- Bearer token authentication for secure access
 - Create and manage teams with members
 - Create, read, and update tasks
 - Assign tasks to team members
@@ -15,7 +15,7 @@ A NestJS application for managing tasks and teams with API key authentication.
 - NestJS
 - TypeORM
 - MySQL database
-- API Key authentication
+- Bearer token authentication
 - Class-validator for validation
 
 ## Installation
@@ -29,7 +29,7 @@ npm install
 Create a `.env` file in the root directory:
 
 ```
-API_KEY=your-secret-api-key-12345
+BEARER_TOKEN=your-secret-bearer-token-12345
 DB_TYPE=mysql
 DB_HOST=localhost
 DB_PORT=3306
@@ -53,25 +53,29 @@ The app will run on http://localhost:3000
 ## API Endpoints
 
 ### Teams
+
 - `POST /teams` - Create a new team with members
 - `GET /teams` - Get all teams
 
 ### Tasks
+
 - `POST /tasks` - Create a new task
 - `GET /tasks` - Get all tasks with assignee info
 - `PUT /tasks/:id` - Update a task
 
-**All endpoints require API key authentication via `x-api-key` header.**
+**All endpoints require Bearer token authentication via `Authorization` header with `Bearer <token>`.**
 
 ## Demo with Postman
 
 Import the `postman_collection.json` file into Postman.
 
 Set the variables:
+
 - `base_url` to `http://localhost:3000`
-- `api_key` to `your-secret-api-key-12345` (or your custom API key from .env)
+- `bearer_token` to `your-secret-bearer-token-12345` (or your custom token from .env)
 
 ### Steps:
+
 1. Create a team with members
 2. Create tasks and assign to team members
 3. Get all tasks with assignee information

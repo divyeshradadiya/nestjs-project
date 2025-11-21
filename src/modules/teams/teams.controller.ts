@@ -1,10 +1,10 @@
 import { Controller, Get, Post, Body, UseGuards } from '@nestjs/common';
 import { TeamsService } from './teams.service';
 import { CreateTeamDto } from './dto/create-team.dto';
-import { ApiKeyGuard } from '../auth/api-key.guard';
+import { BearerAuthGuard } from '../auth/bearer-auth.guard';
 
 @Controller('teams')
-@UseGuards(ApiKeyGuard)
+@UseGuards(BearerAuthGuard)
 export class TeamsController {
   constructor(private teamsService: TeamsService) {}
 
